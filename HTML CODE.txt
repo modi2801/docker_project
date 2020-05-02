@@ -1,0 +1,81 @@
+This file contains the HTML code that is used to create the webpage that is launched in the Docker Container.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+  <body class="p-3 mb-2 bg-dark text-white">
+    <div class="container">
+      <nav class="navbar fixed-top navbar-light bg-light">
+        <a class="navbar-brand" href="http://www.lwindia.com/">
+          <img src="https://pbs.twimg.com/profile_images/2598544326/gxtexckn9nvtqwtugwlt.jpeg" width="50" height="40" alt="">
+        </a>
+          <ul class="navbar navbar-nav">
+            <li><button class="btn btn-outline-success" type="button"><a href="http://www.lwindia.com/linuxworldindia-address-contactus.php">Contact</a></button></li>
+          </ul>
+        </nav>
+      </div>
+    <div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides w3-animate-fading" src="https://pbs.twimg.com/media/EHPyKu5VAAYRY98.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="https://www.linuxworldindia.org/images/Jazbaa1.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="https://i.ytimg.com/vi/IFbL0hKjIFo/maxresdefault.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="https://www.linuxworldindia.org/images/vimaldaga.jpg" style="width:100%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 9000);
+}
+</script>
+      <div class="container" >
+        <div class="jumbotron">
+          <h1 style="font-family:DFPOP1-W9" class="text-white bg-dark">IIEC-Indian Innovation and Entrepreneurship Community</h1>
+          <br>
+          <p class="text-info">IIEC connect engendered with a vision to provide a platform to the 'Average & Below Average'​ Students, who have always been typically OUTCASTED by the conventional MERIT and SCHOLARSHIP Scheme. We TRAIN them, We INVEST in them, and most importantly, We BELIEVE in their TALENT. We live by the principle that -"The IGNORANT Youth of Today, Will be the CREATORS of FUTURE"​</p>
+          <p class="text-info">IIEC has various different innovations under the guidnve of World Record Holder (Mr. Vimal Daga) who took the initiative of making India future ready by gving his students right and proper knowledge for free-of-cost that will help them in building their career and achieve great goals in life.</p>
+          <br>
+          <button class="btn btn-primary" type="button"><a href="https://www.linkedin.com/in/vimaldaga/">Vimal Daga Sir(Linkedin)</a></div>
+        </div>
+      </div>
+      <div class="container">
+        <h2>Initiatives for Making India Future Ready</h2>
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 thumbnail"><img src="https://media-exp1.licdn.com/dms/image/C510BAQEfdamxX4NhgA/company-logo_200_200/0?e=2159024400&v=beta&t=DfnVTgteyUYAYQWYsK8lUPewZy8GBWpeFfoAmwCyjJ0" alt="" class="img-thumbnail" height="200" width="200"></div>
+          <div class="col-lg-4 col-sm-6 thumbnail"><br><br>Jazbaa is first of its kind angel investor network event for IIEC students from PAN India presenting their product/service the developed in training.
+          <br><button class="btn btn-success" type="button"><a href="https://www.youtube.com/watch?v=cbrSfNzIbCU&list=PLAi9X1uG6jZ09hNuXMZhYKVZPxHw7VN6x">Know More</a></div>
+          <div class="col-lg-4 col-sm-6 thumbnail"><br><br></div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 thumbnail"><img src="https://images-na.ssl-images-amazon.com/images/I/61a1wB0YDyL.jpg" alt="" class="img-thumbnail" height="200" width="200"></div>
+          <div class="col-lg-4 col-sm-6 thumbnail"><br><br>IIEC is proud to announce that it's Online "Live Training on REDHAT LINUX RHCSA 8 with Python 3" under the guidance and mentorship of World Record Holder Mr. Vimal Daga is going to start from 8th February (for 6 weeks) and is ABSOLUTELY FREE OF COST
+          <br><button class="btn btn-success" type="button"><a href="https://youtu.be/r6k_w-5R2qw?list=PLAi9X1uG6jZ2b1mUmrUcc_aEoc8tfss8e">Learn It!</a></div>
+
+          <div class="col-lg-4 col-sm-6 thumbnail"><br><br></div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-4 col-sm-6 thumbnail"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSpEAuyGIMoodympPWRMMk158ExeFUmH-xCPEX5GHUlIgiFnIHG&usqp=CAU" alt="" class="img-thumbnail" height="200" width="200"></div>
+            <div class="col-lg-4 col-sm-6 thumbnail"><br><br>Docker Training is another initiative by IIEC RISE community that is meant to train students till expert level and prepare students to think like a creator of such big technology. Many used cases by docker are taught in this session along with some basic commands.
+              <button class="btn btn-success" type="button"><a href="https://youtu.be/NPgXHA41-YM?list=PLAi9X1uG6jZ30QGz7FZ55A27jPeY8EwkE">Learn It!</a></div>
+            <div class="col-lg-4 col-sm-6 thumbnail"><br><br></div>
+        </div>
+      </div>
+  </body>
+</html>
