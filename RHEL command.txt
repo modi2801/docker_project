@@ -1,0 +1,47 @@
+With the help of the following commands, you will be able to lanch docker container in your Reshat Operating System inside which you will be luanching the webserver whise code is provided in HTML CODE file. 
+-------------------------------------------------------------------------------------------------------------
+
+We know that to launch docker from Redhat terminal:
+#docker container run -it <os ypu want to launch with version>
+
+The above command is used to launch docker container normally.
+
+But, we want to host the docker container as a WebServer.
+
+So, to launch we server, commit a O.S. that has a webserver created and can be launched usind docker commands.
+To do so, 
+#docker run -it --name web centos:7	---------(Syntax: #docker run -it --name <Name> <Container to be launched> )
+#yum install httpd	---------(To launch WebServer)
+#yum install net-tools	---------(To check the ip address of your container)
+#cd /var/www/html	---------(Folder in which Apache WebServer loads the webpage to be hosted)
+#cat index.html	---------(create a file and paste the HTML CODE command here)
+#cd	---------(to go back to default folder)
+#usr/sbin/httpd	---------(to start our service)
+#netstat -tnlp	---------(to check and confirm that our service has started)
+
+Now, to lanch web server automatically as the container starts..
+#vim /root/.bashrc	---------(to go the file where h=the default codes are pasted that are run as the container is launched)
+
+Inside that file..
+>rm -rf /var/run/httpd
+>/usr/bin/httpd
+and exit.
+
+Now, your container is ready. 
+You can commit (make a copy) of this container that can be launched with a single command.
+To commit our container.
+#docker commit web myimage:v1	---------(Syntax: #docker commit <Name of the os want to be commited> <Name of the container you want to give with version name> )
+
+Now, download docker compose and create vim docker-compose.yml file and inside it:
+version: '3'
+services:
+  project:
+    image: modi2801/modiproject:v1
+    restart: always
+    ports:
+      - 1234:80
+and save it.
+now, whenever you run docker-compose up
+Your complete setup will be launched and your webserver can be hosted. 
+
+This compose can be used to launch webserver in a single go if your webserver goes down or in other cases. 
