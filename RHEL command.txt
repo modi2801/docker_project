@@ -32,5 +32,16 @@ You can commit (make a copy) of this container that can be launched with a singl
 To commit our container.
 #docker commit web myimage:v1	---------(Syntax: #docker commit <Name of the os want to be commited> <Name of the container you want to give with version name> )
 
-Now, you container is ready and you can luanch it as: 
-#docker run -it -p 1234:80 --name web1 wyimage:v1	---------(using this command our server is launched and it can be connected even from Windows browser with Redhat's ip with port number 1234)
+Now, download docker compose and create vim docker-compose.yml file and inside it:
+version: '3'
+services:
+  project:
+    image: modi2801/modiproject:v1
+    restart: always
+    ports:
+      - 1234:80
+and save it.
+now, whenever you run docker-compose up
+Your complete setup will be launched and your webserver can be hosted. 
+
+This compose can be used to launch webserver in a single go if your webserver goes down or in other cases. 
